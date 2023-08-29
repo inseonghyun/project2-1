@@ -1,0 +1,356 @@
+.wrap {
+    width: 100%;
+}
+
+.inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    background: rgba(0, 0, 0, .5);
+}
+
+header {
+    width: 100%;
+    background: #fff;
+    height: 7rem;
+    position: fixed;
+    z-index: 9999;
+}
+
+header .logo {
+    position: absolute;
+    background: url(../icon/logo_visvim.svg)no-repeat center center;
+    width: 9.3rem;
+    height: 100%;
+    top: 0;
+    left: 4rem;
+}
+
+header ul {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+header ul li {
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 3.3rem;
+    padding-right: 5.5rem;
+}
+
+header ul li span {
+    font-size: 1.1rem;
+}
+
+header ul li .icon1 {
+    height: 18px;
+    width: 18px;
+    margin-right: 7px;
+}
+
+header ul li .icon2 {
+    height: 16.5px;
+    width: 15px;
+    margin-right: 10.5px;
+}
+
+header ul li .icon3 {
+    height: 18px;
+    width: 14px;
+    margin-right: 7.5px;
+}
+
+header ul li .icon4 {
+    height: 21px;
+    width: 21px;
+    padding-right: 10px;
+
+}
+
+header ul li .icon5 {
+    height: 19px;
+    width: 19px;
+}
+
+/* //.header */
+
+main {
+    width: 100%;
+}
+
+/*//.main */
+.banner {
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.left_text {
+    width: 30%;
+    height: auto;
+    margin-left: 4rem;
+}
+
+.left_text div:nth-child(1) {
+    border-bottom: 1px solid #707070;
+}
+
+div a p:nth-of-type(1) {
+    color: #b7b7b7;
+    font-size: 1.1rem;
+}
+
+div a p:nth-of-type(2) {
+    color: #222222;
+    font-size: 1.4rem;
+}
+
+div a p:nth-of-type(3) {
+    color: #b7b7b7;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+.left_text .text_box {
+    padding-top: 2rem;
+}
+
+.text_box a span {
+    font-size: 1.2rem;
+    color: #000000;
+    padding-top: 2rem;
+    line-height: 1.8;
+    font-weight: 100;
+    display: inline-block;
+    padding-bottom: 3rem;
+    padding-right: 1.2rem;
+}
+
+.text_box div a {
+    font-size: 1rem;
+    color: #b7b7b7;
+    display: inline-block;
+    padding-top: 3rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0 5.5rem;
+    padding-top: 1rem;
+    height: 3.6rem;
+    border: 1px solid #707070;
+    font-size: 1.1rem;
+    color: #222222;
+    border-radius: 1.8rem;
+}
+
+.banner .img_box {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 50%;
+    width: 70%;
+}
+
+.banner .img_box .right_img video{position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* //.banner */
+.content1 {
+    width: 100%;
+    background: #655959;
+    height: auto;
+}
+
+.content1 .box {
+    height: 50px;
+    background: rgb(187, 157, 157);
+    display: flex;
+    justify-content: space-between;
+}
+
+.content1 .box .text_box {
+    height: 50px;
+    width: 20%;
+    background: #59e0d2;
+}
+
+.content1 .box .button {
+    height: 50px;
+    width: 10%;
+    background: #426e6a;
+}
+/* //.contant1 */
+
+.img_box {
+    height: 150px;
+    background: #b7b7b7;
+}
+
+.button_box {
+    height: 100px;
+    background: #5d5959;
+}
+
+.content2 {
+    background: #543a3a;
+    position: relative;
+    height: 300px;
+}
+
+.content2 .full_img {
+    width: 100%;
+    height: 100%;
+    background: #845fc1;
+}
+
+.content2 .text_box2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #be9090;
+    bottom: 0;
+    left: 0;
+}
+
+.slide {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.left_img {
+    background: #b7b7b7;
+    width: 70%;
+    height: auto;
+}
+
+.right_text {
+    background: #3f3939;
+    width: 30%;
+    height: auto;
+}
+
+.content3 {
+    background: #543a3a;
+    position: relative;
+    height: 300px;
+}
+
+.content3 .full_img {
+    width: 100%;
+    height: 100%;
+    background: #845fc1;
+}
+
+.content3 .text_box2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #be9090;
+    bottom: 0;
+    left: 0;
+}
+
+.content4 {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.content4 .left_text {
+    background: #b7b7b7;
+    width: 30%;
+    height: auto;
+}
+
+.content4 .right_img {
+    background: #3f3939;
+    width: 70%;
+    height: auto;
+}
+
+.content5 {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.content5 .left_text {
+    background: #9b6d6d;
+    width: 30%;
+    height: auto;
+}
+
+.content5 .right_img {
+    background: #553636;
+    width: 70%;
+    height: auto;
+}
+
+.content6 {
+    width: 100%;
+    height: 300px;
+    background: #8a8989;
+}
+
+.content6 .sub {
+    width: 100%;
+    height: 80%;
+    background: #7b7b7b;
+}
+
+.content7 {
+    width: 100%;
+    height: 300px;
+    background: #8a8989;
+}
+
+.content7 .card {
+    width: 100%;
+    height: 80%;
+    background: #59e0d2;
+}
+
+.content7 .button {
+    text-align: right;
+}
+
+footer {
+    height: 300px;
+    background: #be3d3d;
+}
+
+footer .row {
+    height: 50px;
+    background: #602424;
+}
+
+footer .box {
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .box .logo {
+    width: 30%;
+    height: auto;
+    background: #3f3939;
+}
+
+footer .box .text_box {
+    width: 30%;
+    height: auto;
+    background: #3f3939;
+}
