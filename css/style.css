@@ -128,11 +128,11 @@ header ul li {
 
 header ul li span {
     font-size: 1.1rem;
-    line-height: -150px;
     height: auto;
+    vertical-align: top;
 }
 
-header ul li a{}
+header ul li a {}
 
 
 header ul li .icon1 {
@@ -219,7 +219,7 @@ header ul li .icon5 {
 
 .content1 .img_box {
     margin-bottom: 10.8rem;
-  
+    display: inline-flex;
 }
 
 .content1 .img_box img {
@@ -235,6 +235,7 @@ header ul li .icon5 {
 
 }
 
+
 .button_box input {
     width: 89.06667%;
     max-width: 598px;
@@ -247,12 +248,18 @@ header ul li .icon5 {
 }
 
 .button_box a {
-    display: inline-block;
     width: 13rem;
     height: 5.2rem;
-    border: 1px solid;
-    border-radius: 1.9rem;
+    border-radius: 26px;
+    display: inline-block;
+    margin: 0 6px 30px;
+    background-color: #fff;
+    vertical-align: middle;
+    padding-top: 26px;
+    border: 0.99px #b7b7b7 solid;
+    padding: 0.8%;
 }
+.button_box_in a:nth-child(1)img{width: 5.344rem; height: 1.201rem;}
 
 /* //.contant1 */
 
