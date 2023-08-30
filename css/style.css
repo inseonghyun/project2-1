@@ -80,7 +80,6 @@ main {
     width: 100%;
 }
 
-/*//.main */
 .main_set {
     width: calc(100% - 40px);
     display: flex;
@@ -95,7 +94,7 @@ main {
     margin-left: 4rem;
 }
 
-.left_text div:nth-child(1) {
+.left_text>div:nth-of-type(1) {
     border-bottom: 1px solid #707070;
 }
 
@@ -165,8 +164,35 @@ div a p:nth-of-type(3) {
     object-position: center;
 }
 
+/* //.main_set */
+
+.banner {
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.banner .img_box {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 50%;
+    width: 70%;
+}
+
+.banner .img_box .right_img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 /* //.banner */
+
 .content1 {
     width: 100%;
     position: relative;
@@ -186,8 +212,9 @@ div a p:nth-of-type(3) {
 
 .content1 .box .button {}
 
-.img_box {
+.content1 .img_box {
     margin-bottom: 10.8rem;
+    flex-wrap: nowrap;
 }
 
 .img_box img {
@@ -211,6 +238,7 @@ div a p:nth-of-type(3) {
     box-shadow: 0 1px 5px rgba(0, 0, 0, .6)inset;
     background: #fafafa;
     border: none;
+    outline: none;
 }
 
 .button_box a {
@@ -223,7 +251,7 @@ div a p:nth-of-type(3) {
 
 /* //.contant1 */
 
-.content2{
+.content2 {
     position: relative;
     width: calc(100% - 40px * 2);
     height: 100%;
@@ -246,11 +274,11 @@ div a p:nth-of-type(3) {
     padding: 3rem 0 0 3.5rem;
 }
 
-.text_box2 .button2 {
+.text_box2 div:last-child {
     padding-top: 2rem;
 }
 
-.text_box2 .button2 a {
+.text_box2 .button {
     width: auto;
     height: 3.6rem;
     display: inline-block;
@@ -272,18 +300,22 @@ div a p:nth-of-type(3) {
     align-items: center;
 }
 
-.slide .left_img a img {width: 100%;}
+.slide .left_img a img {
+    width: 100%;
+}
 
 .right_text {
     width: 30%;
-    height: auto;}
+    height: auto;
+}
+
 .right_text div:nth-child(1) {
-        border-bottom: 1px solid #707070;
+    border-bottom: 1px solid #707070;
 }
 
 /* .//slide */
 
-.content3{
+.content3 {
     position: relative;
     width: calc(100% - 40px * 2);
     height: 100%;
@@ -301,93 +333,89 @@ div a p:nth-of-type(3) {
     width: 20.3rem;
     height: 17.2rem;
     background: #fff;
-    top: 0;
+    bottom: 0;
     left: 0;
     padding: 3rem 0 0 3.5rem;
 }
+
 /* .//content3 */
 
-.content4 {
-    width: calc(100% - 40px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-}
-.content4 .img_box {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 50%;
-    width: 70%;
-}
 
-.content4 .img_box .right_img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
 /* .//cotent4 */
 
-.content5 .left_text div:nth-child(2) {
-    border-bottom: 1px solid #707070;
-}
+
 /* .//cotent5 */
 .content6 {
     width: 100%;
-    height: 300px;
-    background: #8a8989;
 }
 
 .content6 .sub {
+    background: url(../img/background.jpg)center center no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 80%;
-    background: #7b7b7b;
 }
 
+.sub h2 {
+    text-align: center;
+}
+
+.sub span {
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/* //.content6 */
+
 .content7 {
-    width: 100%;
-    height: 300px;
-    background: #8a8989;
+    width: calc(100% - (40px + 32px) * 2);
+    margin: 0 auto 15rem;
 }
 
 .content7 .card {
-    width: 100%;
-    height: 80%;
-    background: #59e0d2;
+    display: flex;
+    justify-content: center;
 }
 
-.content7 .button {
-    text-align: right;
+
+.card div {
+    width: 100%;
+    height: 100%;
 }
+
+
+
+
+
 
 footer {
-    height: 300px;
-    background: #be3d3d;
+    height: auto;
+    background: #8b8b8b;
 }
 
 footer .row {
-    height: 50px;
-    background: #602424;
+    width: calc(100% - 40px - 32px);
+    height: 10%;
+    background-color: #222;
+    position: absolute;
+    top: ;
+    right: 0;
 }
 
 footer .box {
-    height: 250px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-footer .box .logo {
+footer .box .logo_box {
     width: 30%;
     height: auto;
-    background: #3f3939;
 }
+
+
 
 footer .box .text_box {
     width: 30%;
     height: auto;
-    background: #3f3939;
+    display: flex;
 }
