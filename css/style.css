@@ -164,6 +164,7 @@ header ul li .icon4 {
 
 }
 
+
 header ul li .icon5 {
     height: 19px;
     width: 19px;
@@ -321,6 +322,7 @@ header ul li .icon5 {
 
 .content2 .full_img {
     margin-bottom: 15rem;
+    height: auto;
 }
 
 .content2 .full_img a img {
@@ -352,6 +354,7 @@ header ul li .icon5 {
     border: 1px solid #707070;
     padding: 0 5.5rem;
     border-radius: 1.8rem;
+    line-height: 3.6rem;
 }
 
 .text_box2 .list {
@@ -362,26 +365,27 @@ header ul li .icon5 {
 
 /* .//content2 */
 .slide {
-    display: flex;
-    align-items: center;
-    background: #fafafa;
-    padding: 150px calc(40px + 32px) 60px;
     margin-bottom: 15rem;
+    background: #fafafa;
+
 }
 
-.slide .left_img {
-    width: 70%;
-}
-
-.slide .left_img a img {
+.slide .max {
+    padding: 150px calc(40px + 32px) 60px;
+    max-width: 1490px;
+    align-items: center;
+    display: flex;
     width: 100%;
 
 
 }
 
-.right_text {
-    width: 30%;
-    height: auto;
+.slide .left_img {
+    width: 66%;
+}
+
+.slide.right_text {
+    width: 34%;
 }
 
 .right_text div:nth-child(1) {
