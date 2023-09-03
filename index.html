@@ -14,14 +14,90 @@
         <header>
             <a href="index.html" class="logo"></a>
             <ul>
-                <li><a href="#"><img class="icon1" src="./icon/icon_about.svg" alt=""><span>About</span></a></li>
+                <li><a href="#"><img class="icon1" src="./icon/icon_about.svg" alt=""><span>About
+                            <span>visvim</span>
+                        </span></a></li>
                 <li><a href="#"><img class="icon2" src="./icon/icon_dissertation.svg"
                             alt=""><span>Dissertation</span></a></li>
                 <li><a href="#"><img class="icon3" src="./icon/icon_store.svg" alt=""><span>Web Store</span></a></li>
-                <li><a href="#"><img class="icon4" src="./icon/icon_3dot.svg" alt=""></a></li>
-                <li><a href="#"><img class="icon5" src="./icon/icon_search.svg" alt=""></a></li>
+                <li class="icon4 icon4on"><span></span></li>
+                <li class="icon5 icon5on">
+                    <div>
+                        <img src="./icon/icon_search.svg" alt="">
+                        <form action="">
+                            <input type="text">
+                            <input type="hidden" name="IncludeBlogs" value="2,3,4,11,12,13,17,18">
+                            <input type="hidden" name="Template" value="search_en">
+                        </form>
+                    </div>
+                </li>
             </ul>
         </header>
+        <div class="header_content">
+            <div class="header_content_l">
+                <p>visvim Official:</p>
+                <p>
+                    <a href="#"><img src="./icon/icon_sns_f_w.svg" alt=""></a>
+                    <a href="#"><img src="./icon/icon_sns_i_w.svg" alt=""></a>
+                </p>
+                <p>Published by Cubism Inc.:</p>
+                <p>
+                    <a href="#"><img src="./icon/logo_ss_w.png" alt=""></a>
+                </p>
+            </div>
+
+            <div class="header_content_r">
+                <div class="header_content_r1">
+                    <p><a href="#">Lookbook</a></p>
+                    <p><a href="#">Stockist</a></p>
+                </div>
+                <div class="header_content_r2">
+                    <p>
+                        <a href="#">News
+                            <span>(visvim Official Instagram)</span>
+                            <img src="./icon/icon_blank.svg" alt="">
+                        </a>
+                    </p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th><a href="#">Topics</a></th>
+                                <td>
+                                    <p>
+                                        <a href="#">Event</a>
+                                    </p>
+                                    <p>
+                                        <a href="#">Information</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <a href="#">Press Release</a>
+                                </th>
+                                <td>
+                                    <p>
+                                        <a href="#">Press</a>
+                                    </p>
+                                    <p>
+                                        <a href="#">Media</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="header_content_r3">
+                    <p><a href=""></a>Recruit</p>
+                    <p><a href=""></a>Contact Us</p>
+                    <p><a href=""></a></p>
+                </div>
+            </div>
+        </div>
         <!-- //.header -->
         <main>
             <div class="banner">
@@ -58,7 +134,7 @@
                     </div>
                     <div class="img_box">
                         <a href="#" class="right_img">
-                            <img src="./img/vmc_top.jpg" alt=""><a>
+                            <img src="./img/vmc_top.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -197,10 +273,9 @@
                     </div>
                     <div class="img_box">
                         <a href="#" class="right_img">
-                            <video src="./video/blue.mp4" playsinline="" muted="" loop="" controlslist="nodownload"
-                                preload="none" autoplay="">
+                            <video src="./video/blue.mp4" playsinline="" muted="" loop="" preload="none" autoplay="">
                             </video>
-                            <a>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -240,8 +315,8 @@
                     </div>
                     <div class="img_box">
                         <a href="#" class="right_img">
-                            <video src="./video/silk.mp4" playsinline="" muted="" loop="" controlslist="nodownload"
-                                preload="none" autoplay=""></video><a>
+                            <video src="./video/silk.mp4" playsinline="" muted="" loop="" preload="none"
+                                autoplay=""></video></a>
                     </div>
                 </div>
             </section>
@@ -299,7 +374,7 @@
                         <a href="#"><img src="./icon/icon_sns_f_w.svg" alt=""></a>
                     </p>
                     <p class="qq">
-                        <a href="#"><img src="./icon/icon_sns_i_w (1).svg" alt=""></a>
+                        <a href="#"><img src="./icon/icon_sns_i_w.svg" alt=""></a>
                     </p>
                     <p>Published by Cubism Inc.:</p>
                     <p>
@@ -334,6 +409,32 @@
             </div>
         </footer>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const icon5 = document.querySelector(".icon5");
+
+            icon5.addEventListener("click", function () {
+                this.classList.toggle("icon5on");
+            });
+
+            // 페이지 로드 시 초기 상태 설정 (아이콘 비활성화)
+            icon5.classList.remove("icon5on");
+        });
+
+
+        // JavaScript로 클릭 이벤트 처리
+        document.addEventListener("DOMContentLoaded", function () {
+            const icon4 = document.querySelector("header ul li.icon4");
+
+            // 초기에 "inverted" 클래스가 없도록 설정
+            icon4.classList.remove("inverted");
+
+            // 클릭 이벤트 핸들러 추가
+            icon4.addEventListener("click", function () {
+                this.classList.toggle("inverted");
+            });
+        });
+    </script>
 </body>
 
 </html>
