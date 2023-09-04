@@ -92,9 +92,9 @@
                     </table>
                 </div>
                 <div class="header_content_r3">
-                    <p><a href=""></a>Recruit</p>
-                    <p><a href=""></a>Contact Us</p>
-                    <p><a href=""></a></p>
+                    <p><a href="#">Recruit</a></p>
+                    <p><a href="#">Contact Us</a></p>
+                    <p><a href="#">Site Policy</a></p>
                 </div>
             </div>
         </div>
@@ -409,6 +409,7 @@
             </div>
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const icon5 = document.querySelector(".icon5");
@@ -432,6 +433,12 @@
             // 클릭 이벤트 핸들러 추가
             icon4.addEventListener("click", function () {
                 this.classList.toggle("inverted");
+            });
+        });
+        // icon4를 클릭했을 때 .header_content를 드롭다운/숨김
+        $(document).ready(function () {
+            $(".icon4").click(function () {
+                $(".header_content").slideToggle();
             });
         });
     </script>
