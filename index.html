@@ -162,11 +162,11 @@
                 <div class="inner">
                     <div class="button_box">
                         <input type="text" name="search" value="" placeholder="Search">
-                        <div>
+                        <div class="button_box_in">
                             <a href="#"><img src="./icon/button/logo_visvim.svg" alt=""></a>
                             <a href="#"><img src="./icon/button/logo_wmv.svg" alt=""></a>
-                            <a href="#"><img src="./icon/button/logo_lcc.png" alt=""></a>
                             <a href="#"><img src="./icon/button/logo_ict.png" alt=""></a>
+                            <a href="#"><img src="./icon/button/logo_lcc.png" alt=""></a>
                             <a href="#"><img src="./icon/button/logo_dept.png" alt=""></a>
                         </div>
                         <div>
@@ -364,16 +364,12 @@
                     <a href="" class="button"></a>
                 </p>
             </div>
-            <div class="box">
-                <div class="logo_box">
-                    <p>
-                        <a href="#"><img src="./icon/logo_visvim_w.svg" alt=""></a>
-                    </p>
+            <div class="footer_content">
+                <div class="footer_content_l">
+                    <p><a href="#"><img src="./icon/logo_visvim_w.svg" alt=""></a></p>
                     <p>visvim Official:</p>
                     <p>
                         <a href="#"><img src="./icon/icon_sns_f_w.svg" alt=""></a>
-                    </p>
-                    <p class="qq">
                         <a href="#"><img src="./icon/icon_sns_i_w.svg" alt=""></a>
                     </p>
                     <p>Published by Cubism Inc.:</p>
@@ -381,29 +377,56 @@
                         <a href="#"><img src="./icon/logo_ss_w.png" alt=""></a>
                     </p>
                 </div>
-                <div class="text_box">
-                    <div class="set1">
-                        <p>About visvim</p>
-                        <p>Dissertation</p>
-                        <p>Web StoreBlank</p>
-                        <p>Lookbook</p>
-                        <p>Stockist</p>
+
+                <div class="footer_content_r">
+                    <div class="footer_content_r1">
+                        <p><a href="#">Lookbook</a></p>
+                        <p><a href="#">Stockist</a></p>
                     </div>
-                    <div class="set2">
-                        <p>News(visvim Official Instagram)Blank</p>
-                        <div>
-                            <p>Topics</p>
-                            <p><a href="">Event</a></p>
-                            <p><a href="">Information</a></p>
-                        </div>
-                        <p><a href="">Press Release</a></p>
-                        <p><a href="">Press</a></p>
-                        <p><a href="">Media</a></p>
+                    <div class="footer_content_r2">
+                        <p>
+                            <a href="#">News
+                                <span>(visvim Official Instagram)</span>
+                                <img src="./icon/icon_blank.svg" alt="">
+                            </a>
+                        </p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th><a href="#">Topics</a></th>
+                                    <td>
+                                        <p>
+                                            <a href="#">Event</a>
+                                        </p>
+                                        <p>
+                                            <a href="#">Information</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <a href="#">Press Release</a>
+                                    </th>
+                                    <td>
+                                        <p>
+                                            <a href="#">Press</a>
+                                        </p>
+                                        <p>
+                                            <a href="#">Media</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="set3">
-                        <p><a href="">Recruit</a></p>
-                        <p><a href="">Contact Us</a></p>
-                        <p><a href="">Site Policy</a></p>
+                    <div class="footer_content_r3">
+                        <p><a href="#">Recruit</a></p>
+                        <p><a href="#">Contact Us</a></p>
+                        <p><a href="#">Site Policy</a></p>
                     </div>
                 </div>
             </div>
@@ -411,36 +434,27 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const icon5 = document.querySelector(".icon5");
+        $(document).ready(function () {
+            const icon5 = $(".icon5");
 
-            icon5.addEventListener("click", function () {
-                this.classList.toggle("icon5on");
+            icon5.click(function () {
+                $(this).toggleClass("icon5on");
             });
 
             // 페이지 로드 시 초기 상태 설정 (아이콘 비활성화)
-            icon5.classList.remove("icon5on");
+            icon5.removeClass("icon5on");
         });
 
 
-        // JavaScript로 클릭 이벤트 처리
-        document.addEventListener("DOMContentLoaded", function () {
-            const icon4 = document.querySelector("header ul li.icon4");
-
-            // 초기에 "inverted" 클래스가 없도록 설정
-            icon4.classList.remove("inverted");
-
-            // 클릭 이벤트 핸들러 추가
-            icon4.addEventListener("click", function () {
-                this.classList.toggle("inverted");
-            });
-        });
-        // icon4를 클릭했을 때 .header_content를 드롭다운/숨김
         $(document).ready(function () {
             $(".icon4").click(function () {
-                $(".header_content").slideToggle();
+                $(".header_content").toggle();
+                $(this).toggleClass('on');
             });
         });
+
+
+
     </script>
 </body>
 
