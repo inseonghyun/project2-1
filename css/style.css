@@ -20,20 +20,45 @@
     justify-content: center;
     height: auto;
     margin: 0 0 0 auto;
-}
-
-.main_set .img_box {
     position: relative;
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 50%;
-    width: 70%;
 }
 
-.main_set .img_box .right_img video {
+.main_set a.right_img {
+    order: 2;
+    position: relative;
+    width: calc(878 / (878 + 448) * 100%);
+    height: auto;
+    overflow: hidden;
+
+}
+
+.main_set .right_img::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 66.66667%;
+    z-index: 0;
+}
+
+.main_set a.right_img video {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main_set a.right_img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -52,18 +77,24 @@
 
 div a p:nth-of-type(1) {
     color: #b7b7b7;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    line-height: 1;
 }
 
 div a p:nth-of-type(2) {
     color: #222222;
     font-size: 1.4rem;
+    padding-bottom: 1rem;
+    line-height: 1;
 }
 
 div a p:nth-of-type(3) {
     color: #b7b7b7;
     font-size: 1rem;
     padding-bottom: 2rem;
+    line-height: 1;
+
 }
 
 .left_text .text_box {
@@ -73,8 +104,7 @@ div a p:nth-of-type(3) {
 .text_box a span {
     font-size: 1.2rem;
     color: #000000;
-    padding-top: 2rem;
-    line-height: 1.8;
+    line-height: 1.83333;
     font-weight: 100;
     display: inline-block;
     padding-bottom: 3rem;
@@ -85,7 +115,6 @@ div a p:nth-of-type(3) {
     font-size: 1rem;
     color: #b7b7b7;
     display: inline-block;
-    padding-top: 3rem;
 }
 
 .button {
@@ -103,6 +132,15 @@ div a p:nth-of-type(3) {
 .button:hover {
     background-color: #707070;
     color: white;
+}
+
+.tag_text a {
+    margin-right: 1rem;
+    padding-top: 0;
+}
+
+.tag_text {
+    margin: 3rem 0;
 }
 
 /* //.main_set */
@@ -391,6 +429,58 @@ header ul li.icon5on div {
     margin-top: 24px;
 }
 
+.header_col {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 40px;
+    height: 618px;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.header_col_con {
+    width: 15px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.header_col_con::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #e5e5e5;
+}
+
+.header_col_con p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    color: #222;
+    left: 0;
+}
+
+.header_col_con p:nth-last-of-type(1) {
+    top: 0;
+    left: 0;
+}
+
+.header_col_con p:nth-last-of-type(2) {
+    bottom: 0;
+    left: 0;
+}
+
 /* //.header */
 
 
@@ -402,33 +492,10 @@ header ul li.icon5on div {
 
 /* //.header contents */
 .banner {
-    width: calc(100% - 40px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    padding-bottom: 1.5rem;
+    margin-bottom: 90px !important;
+    z-index: 0;
 }
 
-.banner .img_box {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 45%;
-    width: calc(878 / (878 + 448) * 100%);
-    object-position: center;
-    object-fit: cover;
-
-
-}
-
-.banner .img_box .right_img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 /* //.banner */
 
@@ -677,6 +744,19 @@ header ul li.icon5on div {
     position: relative;
 }
 
+.content6 .sub::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    opacity: .49;
+    z-index: 0;
+}
+
 .sub h2 img {
     width: 296px;
     height: 93px;
@@ -703,15 +783,20 @@ header ul li.icon5on div {
     text-align: left;
 }
 
+.sub .sub_link {
+    text-align: center;
+}
+
+.sub .sub_link a {
+    background-color: #d2e3ea !important;
+    border: none !important;
+}
+
 
 .sub h2 {
     text-align: center;
 }
 
-.sub span {
-    color: #fff;
-    box-sizing: border-box;
-}
 
 /* //.content6 */
 
