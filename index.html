@@ -7,6 +7,7 @@
     <title>Visvim</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -20,7 +21,7 @@
                 <li><a href="#"><img class="icon2" src="./icon/icon_dissertation.svg"
                             alt=""><span>Dissertation</span></a></li>
                 <li><a href="#"><img class="icon3" src="./icon/icon_store.svg" alt=""><span>Web Store</span></a></li>
-                <li class="icon4 icon4on"><span></span></li>
+                <li class="icon4"><span></span></li>
                 <li class="icon5 icon5on">
                     <div>
                         <img src="./icon/icon_search.svg" alt="">
@@ -109,13 +110,13 @@
             <section class="banner main_set">
                 <div class="left_text">
                     <div>
-                        <a href="#">
+                        <a class="hov" href="#">
                             <p>Dissertation</p>
                             <p><span class="dot">VISVIM MOTORS CLUB</span></p>
                             <p>2023.08.29</p>
                         </a>
                     </div>
-                    <div class="text_box">
+                    <div class="text_box hov">
                         <a href="#"><span>
                                 There are vibrations that can be felt from the steering wheel and accelerator pedal,
                                 as well
@@ -137,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="right_img">
+                <a href="#" class="right_img hov">
                     <img src="./img/vmc_top.jpg" alt="">
                 </a>
             </section>
@@ -151,16 +152,27 @@
                     </div>
                     <a href="#" class="button">Web Store</a>
                 </div>
-                <div class="img_box">
-                    <a href="#"><img src="./img/shoe.jpg" alt=""></a>
-                    <a href="#"><img src="./img/tie.jpg" alt=""></a>
-                    <a href="#"><img src="./img/cap.jpg" alt=""></a>
-                    <a href="#"><img src="./img/denim.jpg" alt=""></a>
-                    <a href="#"><img src="./img/jacket.jpg" alt=""></a>
-                    <a href="#"><img src="./img/shirt.jpg" alt=""></a>
-                    <a href="#"><img src="./img/chino.jpg" alt=""></a>
-                    <a href="#"><img src="./img/pack.jpg" alt=""></a>
-                    <a href="#"><img src="./img/tee.jpg" alt=""></a>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"> <a href="#"><img src="./img/shoe.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/tie.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/cap.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/denim.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/jacket.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/shirt.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/chino.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/pack.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/tee.jpg" alt=""></a></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
                 <div class="inner">
                     <div class="button_box">
@@ -429,6 +441,7 @@
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
         $(document).ready(function () {
             const icon5 = $(".icon5");
@@ -444,13 +457,46 @@
 
         $(document).ready(function () {
             $(".icon4").click(function () {
-                $(".header_content").toggle();
+                $(".header_content").toggleClass('on');
                 $(this).toggleClass('on');
             });
         });
 
 
+        $(document).ready(function () {
+            $(".hov").hover(function () {
+                $(".hov").toggleClass('hover');
+            });
+        });
 
+    </script>
+
+
+
+
+
+
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 7,
+            spaceBetween: -300,
+            breakpoints: { // 반응형 설정이 가능 width값으로 조정
+                1920: {
+                    slidesPerView: 9,
+                },
+
+            },
+        });
     </script>
 </body>
 
