@@ -485,17 +485,26 @@ header ul li.icon5on div {
 
 
 
-
-
-
-
-
 /* //.header contents */
 .banner {
     margin-bottom: 90px !important;
     z-index: 0;
 }
 
+.dot{position: relative;}
+
+.dot::before{
+    content: "";
+    display: inline-block;
+    background-color: #ce0000;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(100% + 4px);
+    bottom: 1em;
+    transform: translate(-50%, 50%);
+}
 
 /* //.banner */
 
@@ -686,19 +695,18 @@ header ul li.icon5on div {
 
 /* .//content2 */
 .slide {
-    padding: 150px calc(40px + 32px) 60px;
-    align-items: center;
-    display: flex;
     width: 100%;
-
+    height: auto;
+    background-color: #fafafa;
+    padding: 150px calc(40px + 32px) 60px;
+    margin-bottom: 150px;
+    display: flex;
+    align-items: center;
 }
-
-.slide .max {}
 
 .slide .left_img {
     width: 65.95745%;
     display: table-cell;
-    vertical-align: middle;
 }
 
 .slide .left_img a {
@@ -716,14 +724,32 @@ header ul li.icon5on div {
 .slide.right_text {
     width: 34.04255%;
     display: table-cell;
+}
+
+.right_text p:nth-child(1) span{
+    display: inline-block;
+    color: #fff;
+    background-color: #000;
+    padding: 0.5em;
+    margin-left: 1em;
     vertical-align: middle;
+    transform: translateY(-2px);
 }
 
 .right_text div:nth-child(1) {
     border-bottom: 1px solid #707070;
 }
 
+.right_text div a p {
+    padding: 0 0 1rem 2.9rem;
+}
+
+.right_text .text_box {
+    padding: 2rem 0 0 2.9rem;
+}
+
 /* .//slide */
+
 
 .content3 {
     position: relative;
@@ -737,6 +763,8 @@ header ul li.icon5on div {
 .content3 .full_img a img {
     width: 100%;
     height: auto;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .content3 .text_box2 {
